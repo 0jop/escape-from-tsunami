@@ -121,7 +121,7 @@ In the files you will receive there will also be a standard version of the dynam
 
 # Adding new base skins
 ![base_skin](images/base_skin_image.png)
-To add/modify the base skins, go to base_skin_changer_component.verse. Once you are in the file, you will find a list of all the skins that we have already pre-filled for you. Each element contains the name of the skin and the data related to it. In the base_skin_definition object, you must reference the texture and the material. Simply reference the path where your texture or material is located. 
+To add/modify the base skins, go to `base_skin_changer_component.verse`. Once you are in the file, you will find a list of all the skins that we have already pre-filled for you. Each element contains the name of the skin and the data related to it. In the base_skin_definition object, you must reference the texture and the material. Simply reference the path where your texture or material is located. 
 
 So, here's how a line in this list is supposed to be constructed:
 ![base_skin](images/code_example.png)
@@ -143,3 +143,23 @@ To do this, simply check the `ENABLE TO USE CUSTOM COLOR / TEXTURE` parameter. O
 
 ![base_skin](images/instance_material_parameter.png)
 
+# Adding new live event material
+
+
+In the same way as creating a new instance of a base skin, go to this path: `TsunamiTemplate > Meshes > World > Landscape`
+Here you can view the materials we have prefabricated. To create a new one, simply create a new instance of `M_BaseMat`. (image) 
+
+![base_skin](images/instance_material_parameter.png)
+
+Once the instance has been created, you can double-click to open it and you will find these parameters: (image)
+
+![base_skin](images/instance_material_parameter.png)
+
+The system works exactly the same as for the base skin. You can choose to replace a square of the texture with a color or a texture.
+Here is the UV mapping diagram (image). You can, of course, draw inspiration from existing material instances to better understand how it works.
+
+![base_skin](images/instance_material_parameter.png)
+
+Once your material instances have been created, you can now fill them in the respective fields of the live_event_manager_component component. To do this, simply go to the EP_Game > live_event_manager_component and fill in the LandscapeMaterial field.
+
+![base_skin](images/instance_material_parameter.png)
