@@ -141,25 +141,25 @@ Once you understand how the system works, it is easier to understand how the mat
 Thanks to this material, you will be able to change the color for numbers 1, 2, 4, and 5, or even add an animated texture of your choice.
 To do this, simply check the `ENABLE TO USE CUSTOM COLOR / TEXTURE` parameter. Once this parameter is enabled, you must enable either `UseColor` and set the value to `1.0` if you want to use a single color, or `UseTexture` and also set the value to `1.0` if you want to use a texture. When you enable these parameters, the texture on the square where the mesh UVs are mapped is replaced by the one you added.
 
-![base_skin](images/instance_material_parameter.png)
+![landscape_skin](images/instance_material_parameter.png)
 
 # Adding new live event material
 
 
 In the same way as creating a new instance of a base skin, go to this path: `TsunamiTemplate > Meshes > World > Landscape`
-Here you can view the materials we have prefabricated. To create a new one, simply create a new instance of `M_BaseMat`. (image) 
+Here you can view the materials we have prefabricated. To create a new one, simply create a new instance of `M_BaseMat`.
 
-![base_skin](images/instance_material_parameter.png)
+![landscape_skin](images/create_new_landscape_instance.png)
 
-Once the instance has been created, you can double-click to open it and you will find these parameters: (image)
+Once the instance has been created, you can double-click to open it and you will find these parameters:
 
-![base_skin](images/instance_material_parameter.png)
+![landscape_skin](images/landscape_instance_material_parameter.png)
 
 The system works exactly the same as for the base skin. You can choose to replace a square of the texture with a color or a texture.
-Here is the UV mapping diagram (image). You can, of course, draw inspiration from existing material instances to better understand how it works.
+Here is the UV mapping diagram. You can, of course, draw inspiration from existing material instances to better understand how it works.
 
-![base_skin](images/instance_material_parameter.png)
+![landscape_skin](images/UV_Landscape.png)
 
-Once your material instances have been created, you can now fill them in the respective fields of the live_event_manager_component component. To do this, simply go to the EP_Game > live_event_manager_component and fill in the LandscapeMaterial field.
+Once your material instances have been created, you can now fill them in the respective fields of the live_event_manager_component component. To do this, simply go to the `EP_Game > live_event_manager_component` and fill in the `LandscapeMaterial` field.
 
-![base_skin](images/instance_material_parameter.png)
+![landscape_skin](images/live_event_entity.png)
