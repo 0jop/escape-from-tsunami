@@ -119,4 +119,25 @@ This template includes Asicson's dynamic material, and he gets a share of each p
 In the files you will receive there will also be a standard version of the dynamic material, but ours in the game is a bit adapted. We changed the code a bit to make it work for one line materials, and to make it work with entities. We also changed the font to Nunito 900. View Asicson's tutorial linked below on it to see how you can use it in other projects too!<br>
 [Custom Text System for Any Need - Asicson](https://youtu.be/_9YQt7tWor8)
 
-## Adding new base skins
+# Adding new base skins
+![base_skin](images/base_skin_image.png)
+To add/modify the base skins, go to base_skin_changer_component.verse. Once you are in the file, you will find a list of all the skins that we have already pre-filled for you. Each element contains the name of the skin and the data related to it. In the base_skin_definition object, you must reference the texture and the material. Simply reference the path where your texture or material is located. 
+
+So, here's how a line in this list is supposed to be constructed:
+![base_skin](images/base_skin_image.png)
+
+## Create a new instance of the base skin material
+
+![base_skin](images/base_skin_image.png)
+To create a new instance of the base skin material, you must go to this path: `TsunamiTemplate > Meshes > BaseMeshes > MaterialInstances` (*1). Once you have navigated to this path, you can view the material instances that we have already prefabricated. To create a new one, simply right-click (*2) on one of the existing materials and then create a material instance.
+
+## Customize a base skin material
+Once your material instance has been created, double-click on it to open it.
+
+Here is how the UVs of the base mesh are composed, and this applies to all three levels of the base (see photo below).
+![base_skin](images/base_skin_image.png)
+
+Once you understand how the system works, it is easier to understand how the material instance parameters work.
+Thanks to this material, you will be able to change the color for numbers 1, 2, 4, and 5, or even add an animated texture of your choice.
+To do this, simply check the `ENABLE TO USE CUSTOM COLOR / TEXTURE` parameter. Once this parameter is enabled, you must enable either `UseColor` and set the value to `1.0` if you want to use a single color, or `UseTexture` and also set the value to `1.0` if you want to use a texture. When you enable these parameters, the texture on the square where the mesh UVs are mapped is replaced by the one you added.
+
