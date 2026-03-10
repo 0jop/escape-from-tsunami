@@ -69,6 +69,8 @@ For `SetCharacterMaterial`, copy one of the lines, and change the first part the
 
 And the longest one; `UpdateCharacterFromCollection` is used to update the values of this material instance. Change the paths to your mesh and material for each character.
 
+Also update the directory.verse file with the updated folder names. Just add them instead of Example1 and Example2 and keep adding to this list.
+
 ## Setting up collections
 Changing the collections is also easy. Locate the `Scripts.GameCharacters.Collections.character_collections.verse` file. Here you can change the collections' names, multiplier, and its index colors (used in index). Make sure to also change the `ecollection` enum contents located at the top of the file. After changing these you will get errors in other scripts, but these are easy to change. Locate the lines where it indicated the errors, for example the ToColor function, and change the contents. Just change it to `ecollection.Diamond => ...`, or whatever you name your collection. The actual ecollection enum is not player facing, and it's just for the code, though it is recommended to change this.
 
